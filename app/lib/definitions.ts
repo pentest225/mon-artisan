@@ -22,7 +22,11 @@ export type User = {
     phone:string,
     password:string;
     user_type:'client'|'artisan'|'admin';
-    account_status:'active'|'unactive'|'suspend'|'disabled'|'wating'
+    account_status:'active'|'unactive'|'suspend'|'disabled'|'wating';
+    
+    create_at:string;
+    update_at:string;
+    is_delete:boolean;
 }
 
 export type Artisan = {
@@ -38,7 +42,10 @@ export type Artisan = {
     study_level:string;
     is_cetif:boolean;
     wathapp_phone:string;
-    avarage:number
+    avarage:number;
+    create_at:string;
+    update_at:string;
+    is_delete:boolean;
 }
 
 export type ServiceType = {
@@ -47,6 +54,10 @@ export type ServiceType = {
     description:string;
     service_icon:string;
     is_actif:boolean
+
+    create_at:string;
+    update_at:string;
+    is_delete:boolean;
 }
 
 
@@ -61,8 +72,11 @@ export type Service = {
     id:string;
     artisan_id:string;
     desciption:string;
+    status:'active'|'unactive'|'suspend'|'disabled'|'wating';
+
     create_at:string;
-    status:'active'|'unactive'|'suspend'|'disabled'|'wating'
+    update_at:string;
+    is_delete:boolean;
 }
 
 export type ProductCategory = {
@@ -81,9 +95,13 @@ export type ProductSubCategory = {
     category_id: string;
     name:string;
     description:string;
+
+
     create_at:string;
     update_at:string;
     is_delete:boolean;
+
+    
 }
 
 export type Product = {
