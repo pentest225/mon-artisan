@@ -6,19 +6,7 @@ import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { appName } from '@/app/lib/constant'
 import bcrypt from 'bcrypt';
-import { CreateSegmentPath } from 'next/dist/server/app-render/app-render'
 
-const FromSchema = z.object({
-    id: z.string(),
-    customerId: z.string({
-        invalid_type_error: 'Please select a cusotmer'
-    }),
-    amount: z.coerce.number().gt(0, { message: 'Please enter an amount greter than $0' }),
-    status: z.enum(['pending', 'paid'], {
-        invalid_type_error: 'Please select an invoice status.'
-    }),
-    date: z.string()
-})
 
 const UserFromSchema = z.object({
     id: z.string(),
@@ -65,7 +53,7 @@ export async function createUser(/**prevState: CreatUserState, */ formData: Form
         "confirm_password": formData.get("confirm_password"),
         "accept_condition": formData.get("accept_condition")
     })
-    
+    console.log(validatedFields.error)
     if(!validatedFields.success){
         return {
             errors: validatedFields.error.flatten().fieldErrors,
@@ -83,30 +71,19 @@ export async function createUser(/**prevState: CreatUserState, */ formData: Form
     const account_status = 'active'
     try {
         const tableName = appName + "_users"
-        await sql`INSERT INTO ${tableName} (
-        name,
-        last_name,
-        email,
-        phone,
-        password,
-        user_type,
-        account_status,
-        create_at,
-        update_at,is_delete
+        const query = `
+        INSERT INTO ${tableName} (
+            name, last_name, email, phone, password, user_type, account_status, create_at, update_at, is_delete
+        ) VALUES (
+            $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
         )
-        VALUES (
-            ${name},
-            ${last_name},
-            ${email},
-            ${phone},
-            ${hashedPassword},
-            ${userType},
-            ${account_status},
-            ${createAt},
-            ${updateAt},
-            ${isDelte}
-        )
-        `
+        `;
+
+    const values = [
+         name, last_name, email, phone, hashedPassword,
+            userType, account_status, createAt, updateAt, isDelte
+    ];
+    await sql.query(query,values)
     } catch (error) {
         console.error(error)
         return { message: 'Database Error:Failed to insert Invoice' }

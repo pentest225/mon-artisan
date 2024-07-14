@@ -1,9 +1,9 @@
+
 import Link from "next/link";
-import { createUser, CreatUserState } from "../lib/actions";
+import { createUser, CreatUserState} from "../lib/actions";
 import { useActionState } from 'react';
 export default function Page() {
-    // const initialState: CreatUserState = { message: null, errors: {} };
-    // const [state, formAction] = useActionState(createUser, initialState);
+
     return (
         <>
             {/* START MAIN CONTENT */}
@@ -43,6 +43,14 @@ export default function Page() {
                                                     className="form-control"
                                                     name="email"
                                                     placeholder="Enter Your Email"
+                                                />
+                                            </div>
+                                            <div className="form-group mb-3">
+                                                <input
+                                                    type="text"
+                                                    className="form-control"
+                                                    name="phone"
+                                                    placeholder="Enter Your Phone"
                                                 />
                                             </div>
                                             <div className="form-group mb-3">
