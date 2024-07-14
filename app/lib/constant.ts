@@ -1,0 +1,1 @@
+export const appName = "mon_artisan"
