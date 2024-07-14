@@ -9,7 +9,7 @@ export default function Footer(){
                   <div className="widget">
                     <div className="footer_logo">
                       <a href="#">
-                        <img src="site_assets/images/logo_dark.png" alt="logo" />
+                        <img src="/site_assets/images/logo_dark.png" alt="logo" />
                       </a>
                     </div>
                     <p className="mb-3">
@@ -82,12 +82,12 @@ export default function Footer(){
                     <ul className="app_list">
                       <li>
                         <a href="#">
-                          <img src="site_assets/images/f1.png" alt="f1" />
+                          <img src="/site_assets/images/f1.png" alt="f1" />
                         </a>
                       </li>
                       <li>
                         <a href="#">
-                          <img src="site_assets/images/f2.png" alt="f2" />
+                          <img src="/site_assets/images/f2.png" alt="f2" />
                         </a>
                       </li>
                     </ul>
@@ -192,28 +192,28 @@ export default function Footer(){
                   <ul className="footer_payment text-center text-md-end">
                     <li>
                       <a href="#">
-                        <img src="site_assets/images/visa.png" alt="visa" />
+                        <img src="/site_assets/images/visa.png" alt="visa" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="site_assets/images/discover.png" alt="discover" />
+                        <img src="/site_assets/images/discover.png" alt="discover" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="site_assets/images/master_card.png" alt="master_card" />
+                        <img src="/site_assets/images/master_card.png" alt="master_card" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
-                        <img src="site_assets/images/paypal.png" alt="paypal" />
+                        <img src="/site_assets/images/paypal.png" alt="paypal" />
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <img
-                          src="site_assets/images/amarican_express.png"
+                          src="/site_assets/images/amarican_express.png"
                           alt="amarican_express"
                         />
                       </a>
@@ -229,32 +229,32 @@ export default function Footer(){
           <i className="ion-ios-arrow-up" />
         </a>
 
-        <script src="site_assets/js/jquery-3.6.0.min.js"></script>
+        <script src="/site_assets/js/jquery-3.6.0.min.js"></script>
 
-        <script src="site_assets/js/popper.min.js"></script>
+        <script src="/site_assets/js/popper.min.js"></script>
 
-        <script src="site_assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/site_assets/bootstrap/js/bootstrap.min.js"></script>
 
-        <script src="site_assets/owlcarousel/js/owl.carousel.min.js"></script>
+        <script src="/site_assets/owlcarousel/js/owl.carousel.min.js"></script>
 
-        <script src="site_assets/js/magnific-popup.min.js"></script>
+        <script src="/site_assets/js/magnific-popup.min.js"></script>
 
-        <script src="site_assets/js/waypoints.min.js"></script>
+        <script src="/site_assets/js/waypoints.min.js"></script>
 
-        <script src="site_assets/js/parallax.js"></script>
+        <script src="/site_assets/js/parallax.js"></script>
 
-        <script src="site_assets/js/jquery.countdown.min.js"></script>
+        <script src="/site_assets/js/jquery.countdown.min.js"></script>
 
-        <script src="site_assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/site_assets/js/imagesloaded.pkgd.min.js"></script>
 
-        <script src="site_assets/js/isotope.min.js"></script>
+        <script src="/site_assets/js/isotope.min.js"></script>
 
-        <script src="site_assets/js/jquery.dd.min.js"></script>
+        <script src="/site_assets/js/jquery.dd.min.js"></script>
 
-        <script src="site_assets/js/slick.min.js"></script>
+        <script src="/site_assets/js/slick.min.js"></script>
 
-        <script src="site_assets/js/jquery.elevatezoom.js"></script>
+        <script src="/site_assets/js/jquery.elevatezoom.js"></script>
 
-        <script src="site_assets/js/scripts.js"></script>
+        <script src="/site_assets/js/scripts.js"></script>
     </>)
 }

@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { createUser, CreatUserState} from "../lib/actions";
+import { createUser, CreatUserState} from "../../lib/actions";
 import { useActionState } from 'react';
 export default function Page() {
 
